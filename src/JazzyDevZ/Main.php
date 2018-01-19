@@ -66,7 +66,6 @@ class Main extends PluginBase implements Listener{
   
     public function enableForm($player){
       if(isset($this->fly[strtolower($sender->getName())])){
-        unset($this->fly[strtolower($sender->getName())]);
         $sender->setAllowFlight(true);
         $sender->setFlying(true);
         $sender->addTitle(TF::GREEN . "Fly Mode Enabled");
@@ -74,7 +73,6 @@ class Main extends PluginBase implements Listener{
       
     public function disabeForm($player){
       if(isset($this->fly[strtolower($sender->getName())])){
-        unset($this->fly[strtolower($sender->getName())]);
         $sender->setAllowFlight(false);
         $sender->setFlying(false);
         $sender->addTitle(TF::RED . "Fly Mode Disabled!");

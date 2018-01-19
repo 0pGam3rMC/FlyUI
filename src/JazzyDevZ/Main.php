@@ -1,5 +1,10 @@
 <?php
 
+//Property of DevrlyCode & YungFlowz, you do not have permission to copy this plugin.
+//Property of DevrlyCode & YungFlowz
+//Any And All Usages Involving Non-Authorized Users Will Be Refered To As Meanie Heads
+//Copyright © @JazzyDevZ LLC
+
 namespace FlyUI;
 
 use pocketmine\Server;

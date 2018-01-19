@@ -1,4 +1,3 @@
-...
 name: FlyUI-JazzyDevZ
 main: JazzyDevZ/Main
 version: 0.0.2
@@ -11,4 +10,3 @@ commands:
 permissions:
   fly.permission:
     default: false
----

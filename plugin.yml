@@ -1,0 +1,14 @@
+...
+name: FlyUI-JazzyDevZ
+main: JazzyDevZ/Main
+version: 0.0.2
+api: [3.0.0-ALPHA10]
+author: JazzyDevZ
+
+commands:
+  fly:
+    description: "Sends a form to you that enables fly mode"
+permissions:
+  fly.permission:
+    default: false
+---

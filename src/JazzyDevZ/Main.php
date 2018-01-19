@@ -9,25 +9,23 @@ namespace FlyUI;
 
 use pocketmine\Server;
 use pocketmine\Player;
-use pocketmine\plugin\PluginBase;
+use pocketmine\plugin\PluginBase as Base;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use jojoe77777\FormAPI;
 
-class Main extends PluginBase implements Listener{
+class Main extends Base implements Listener{
   
     public function onEnable(){
         $this->getLogger()->info("FlyUI Activated");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
-  
-   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
         if(strtolower($command->getName()) == "fly"){
           if($sender->hasPermission("fly.permission") || $sender->isOp()){
           }
-          
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
         $player = $sender->getPlayer();
         switch ($cmd->getName()){
@@ -63,13 +61,11 @@ class Main extends PluginBase implements Listener{
         $form->addButton(TF::WHITE . "Cancel");
         $form->sendToPlayer($player);
     }
-  
     public function enableForm($player){
         $sender->setAllowFlight(true);
         $sender->setFlying(true);
         $sender->addTitle(TF::GREEN . "Fly Mode Enabled");
-      }
-      
+      }  
     public function disabeForm($player){
         $sender->setAllowFlight(false);
         $sender->setFlying(false);
